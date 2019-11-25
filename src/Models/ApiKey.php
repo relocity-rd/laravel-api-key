@@ -76,7 +76,7 @@ class ApiKey extends Model
     public static function generate()
     {
         do {
-            $key = str_random(64);
+            $key = Str::random(64);
         } while (self::keyExists($key));
 
         return $key;
